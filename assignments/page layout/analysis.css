@@ -22,7 +22,6 @@ body {
     color: #333;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr;
     min-height: 100vh;
 }
 
@@ -51,13 +50,13 @@ h2 {
 
 nav ul {
     list-style: none;
-    padding: 0px;
+    padding: 0;
     display: flex;
     justify-content: space-around;
 }
 
 nav li {
-    margin: 0 10px; /* Added spacing between each link */
+    margin: 0 10px;
 }
 
 nav a {
@@ -75,12 +74,22 @@ nav a:hover {
 }
 
 main {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-section {
+.content-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 100%;
+}
+
+.essay, .works-cited {
+    flex-grow: 1;
+    margin-bottom: 20px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -93,15 +102,16 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
 a {
     color: #ffffff;
 }
-
 
 #footer-text {
     font-size: 12px;
     font-family: 'Roboto', sans-serif;
 }
+
 header nav {
     display: flex;
     justify-content: space-between;
@@ -118,12 +128,7 @@ header nav {
         flex-direction: column;
         align-items: center;
     }
-
-    nav li {
-        margin: 5px 0; 
-    }
 }
-
 
 @keyframes gradientAnimation {
     0% {
@@ -142,14 +147,3 @@ header nav {
         background-position: 100% 100%;
     }
 }
-
-.content-container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-    width: 100%;
-    max-width: 100%;
-}
-
