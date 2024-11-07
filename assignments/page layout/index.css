@@ -142,3 +142,20 @@ header nav {
         background-position: 100% 100%;
     }
 }
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+.essay, .works-cited {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    margin-bottom: 20px;
+}
