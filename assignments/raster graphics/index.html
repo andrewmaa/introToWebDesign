@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raster Graphics Project</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        .foreground-image {
+            position: absolute;
+            left: 100px;
+            bottom: 20px;
+            max-width: 15%;
+            height: auto;
+        }
+        .caption {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="foreground-image" src="foreground-480.png" 
+         srcset="foreground-480.png 480w, foreground-960.png 960w, foreground-1440.png 1440w"
+         sizes="(max-width: 480px) 480px, (max-width: 960px) 960px, 1440px"
+         alt="Image of me">
+    
+    <div class="caption">
+        <h1>Raster Graphics Project</h1>
+        <p>An image of me in front of the Flatiron Building in Toronto.</p>
+    </div>
+</body>
+
+</html>
